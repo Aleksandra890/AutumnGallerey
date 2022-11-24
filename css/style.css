@@ -1,0 +1,79 @@
+:root {
+	--dark: #070707;
+	--sizeindex: calc(1vw + 1vh);
+	
+}
+body, html {
+	
+	background-color: var(--dark);
+	color: #fff;
+	font-family: raleway_m, sans-serif;
+	
+	
+}
+@font-face {
+	font-family: raleway_m;
+	src: url(../../fonts/raleway-v22-cyrillic-300.woff2);
+	font-weight: 300;
+}
+@font-face {
+	font-family: raleway_m;
+	src: url(../../fonts/raleway-v22-cyrillic-900.woff2);
+	font-weight: 900;
+}
+a.glo{
+ color:#ffff;
+ padding: 10px 10px;
+ width:100px;
+ text-decoration:none;
+ text-align:center;
+ margin:0px auto;
+ display: block;
+ background-image: linear-gradient(to left,transparent,transparent 50%,#B5B5B5 50%,#C4C4C4);
+ background-position: 100% 0;
+ background-size: 200% 100%;
+ transition: all .25s ease-in;
+ font: 400 15px tahoma;
+ border: 1px solid #ffff;
+}
+a.glo:hover {
+background-position: 0 0;
+color:#fff;
+}
+
+.logo {
+	font-size: calc(var(--sizeindex) * 2);
+	font-weight: 900;
+	display: inline-block;
+	background: linear-gradient(45deg, DarkMagenta, Tomato, Violet);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.slider_bg {
+	z-index: 0;
+	transform: rotate(-20deg)!important;
+	top: -90vh;
+	left: -10vh;
+	opacity: .18;
+	filter: blur(100px) saturate(10);
+}
+.slider_bg .slider__item {
+	max-height: 100vh;
+}
+.slider {
+	height: 100%;
+	transform: rotate(15deg);
+	overflow: visible;
+	top: 10vh;
+}
+.slier__wrapper {
+	transition: var(--transition)!important;
+	will-change: transform;
+}
+.slider__item {
+	max-height: 76vh;
+	overflow: hidden;
+	cursor: pointer;
+	transition: transform var(--transition), box-shadow var(--transition);
+}
